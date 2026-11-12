@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#210e19">
+  <title>A Little Universe | Just for You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="petal-layer" id="petalLayer"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#home">A Little <span>Universe ✦</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#note">A Note</a>
+      <a href="#gallery">Memories</a>
+      <a href="#gift">Your Gift</a>
+      <a href="#surprise">Surprise</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-content reveal">
+        <span class="eyebrow">A LITTLE SOMETHING FOR SOMEONE SPECIAL</span>
+        <h1>Some people make<br>the world feel <em>softer.</em></h1>
+        <p>
+          This little corner of the internet is filled with smiles,
+          memories, and tiny surprises.
+        </p>
+        <a href="#note" class="primary-btn">Explore your little world <span>↗</span></a>
+        <div class="hero-caption">Made with a little extra thought ♡</div>
+      </div>
+      <div class="hero-decoration decor-one">✿</div>
+      <div class="hero-decoration decor-two">♡</div>
+      <div class="hero-decoration decor-three">✧</div>
+      <div class="hero-bottom">SCROLL TO DISCOVER <span>↓</span></div>
+    </section>
+
+    <!-- NOTE -->
+    <section class="section note-section" id="note">
+      <div class="section-heading reveal">
+        <span class="eyebrow">A FEW WORDS</span>
+        <h2>A little note, <em>just for you.</em></h2>
+        <p>Some things are better shared in a quiet moment.</p>
+      </div>
+
+      <article class="letter-card reveal">
+        <div class="letter-top"><span>✧ A LITTLE REMINDER</span><span>♡</span></div>
+        <p class="letter-greeting">Hey, you!</p>
+        <p>
+          I hope you never forget how special your presence is.
+          The way you smile, the little things you do, and the way
+          you make ordinary moments feel memorable — they all matter.
+        </p>
+        <p>
+          On difficult days, remember to be gentle with yourself.
+          You deserve happiness, beautiful moments, and all the
+          little things that make your heart feel light.
+        </p>
+        <p class="letter-ending">Keep being wonderfully you. ♡</p>
+        <div class="letter-footer">A page written with care ✦</div>
+      </article>
+
+      <div class="qualities reveal">
+        <div class="quality"><span>01</span><h3>Your smile</h3><p>A little sunshine on an ordinary day.</p></div>
+        <div class="quality"><span>02</span><h3>Your kindness</h3><p>The little things never go unnoticed.</p></div>
+        <div class="quality"><span>03</span><h3>Your strength</h3><p>Even on days when you don't see it.</p></div>
+      </div>
+    </section>
+
+    <!-- MOOD -->
+    <section class="section mood-section" id="mood">
+      <div class="section-heading reveal">
+        <span class="eyebrow">HOW ARE YOU FEELING?</span>
+        <h2>Pick your <em>mood.</em></h2>
+        <p>There is a little message for every kind of day.</p>
+      </div>
+      <div class="mood-options reveal">
+        <button class="mood-btn" data-mood="happy">☀️<span>Happy</span></button>
+        <button class="mood-btn" data-mood="tired">🌙<span>Tired</span></button>
+        <button class="mood-btn" data-mood="sad">🌧️<span>Sad</span></button>
+        <button class="mood-btn" data-mood="excited">✨<span>Excited</span></button>
+        <button class="mood-btn" data-mood="stressed">🫧<span>Stressed</span></button>
+      </div>
+      <div class="mood-result" id="moodResult" aria-live="polite">
+        <span>♡</span>
+        <p>Choose a mood to discover your message.</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading reveal">
+        <span class="eyebrow">LITTLE MOMENTS</span>
+        <h2>A place for <em>memories.</em></h2>
+        <p>Add your favourite photographs to make this page yours.</p>
+      </div>
+
+      <div class="upload-area reveal">
+        <label class="upload-btn" for="photoUpload">＋ Add your photographs</label>
+        <input id="photoUpload" type="file" accept="image/*" multiple>
+        <span>Choose pictures from your device</span>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="empty-gallery" id="emptyGallery">
+          <span>♡</span>
+          <p>Your beautiful memories will appear here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFT -->
+    <section class="section gift-section" id="gift">
+      <div class="section-heading reveal">
+        <span class="eyebrow">SOMETHING SPECIAL</span>
+        <h2>A gift <em>for you.</em></h2>
+        <p>There is a little surprise waiting inside this box.</p>
+      </div>
+
+      <div class="gift-stage reveal">
+        <div class="gift-sparkle sparkle-a">✦</div>
+        <div class="gift-sparkle sparkle-b">✧</div>
+        <div class="gift-sparkle sparkle-c">♡</div>
+
+        <div class="bouquet" id="bouquet" aria-hidden="true">
+          <div class="bouquet-wrap"></div>
+          <div class="bouquet-flower flower-a">🌹</div>
+          <div class="bouquet-flower flower-b">🌹</div>
+          <div class="bouquet-flower flower-c">🌹</div>
+          <div class="bouquet-flower flower-d">🌹</div>
+          <div class="bouquet-flower flower-e">🌹</div>
+          <div class="bouquet-flower flower-f">🌹</div>
+          <div class="bouquet-leaf leaf-a">🌿</div>
+          <div class="bouquet-leaf leaf-b">🌿</div>
+          <div class="bouquet-ribbon">♡</div>
+        </div>
+
+        <div class="gift-box" id="giftBox">
+          <div class="gift-lid" id="giftLid">
+            <div class="gift-bow"></div>
+          </div>
+          <div class="gift-body">
+            <div class="gift-band"></div>
+            <div class="gift-front-heart">♡</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="primary-btn gift-open-btn" id="unboxButton">🎁 Unbox your gift</button>
+      <p class="gift-caption" id="giftCaption" aria-live="polite">A little surprise, wrapped with care.</p>
+      <button class="text-btn" id="resetGift" hidden>↻ Close the gift and start again</button>
+    </section>
+
+    <!-- ENVELOPE -->
+    <section class="section envelope-section" id="surprise">
+      <div class="section-heading reveal">
+        <span class="eyebrow">ONE MORE THING</span>
+        <h2>Open your <em>little surprise.</em></h2>
+        <p>There is a message waiting just for you.</p>
+      </div>
+
+      <button class="envelope" id="envelopeButton" aria-label="Open your letter">
+        <span class="envelope-heart">♡</span>
+        <span class="envelope-label">OPEN ME</span>
+      </button>
+      <div class="secret-message" id="secretMessage" hidden>
+        <span class="secret-heart">♥</span>
+        <h3>For someone wonderful</h3>
+        <p>
+          May your days be full of reasons to smile, your dreams
+          find their way to reality, and your heart always find
+          a little peace. Never underestimate the happiness
+          you bring into the world.
+        </p>
+        <span>With warm wishes, always ♡</span>
+      </div>
+    </section>
+
+    <!-- WISH JAR -->
+    <section class="section wish-section">
+      <div class="section-heading reveal">
+        <span class="eyebrow">A TINY BIT OF MAGIC</span>
+        <h2>Pick a <em>little wish.</em></h2>
+        <p>Shake the imaginary jar and see what comes out.</p>
+      </div>
+      <div class="wish-jar reveal">
+        <div class="jar-icon">🏺</div>
+        <p id="wishText">A beautiful little wish is waiting for you.</p>
+        <button class="primary-btn" id="wishButton">Pick a wish ✨</button>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="final-section">
+      <div class="final-stars">✧　♡　✦</div>
+      <h2>And that's your<br><em>little universe.</em></h2>
+      <p>Keep a little happiness with you, wherever you go.</p>
+      <button class="primary-btn" id="petalButton">Make it rain roses 🌹</button>
+      <div class="final-signature">Made with care ♡</div>
+    </section>
+  </main>
+
+  <!-- MUSIC PLAYER -->
+  <aside class="music-player">
+    <div class="music-info">
+      <span class="music-icon">♫</span>
+      <div>
+        <strong id="musicTitle">Your song</strong>
+        <small id="musicStatus">Choose a song to begin</small>
+      </div>
+    </div>
+    <input type="file" id="musicUpload" accept="audio/*" hidden>
+    <label for="musicUpload" class="music-control upload-music" title="Upload music">＋</label>
+    <button class="music-control" id="playMusic" title="Play or pause">▶</button>
+    <button class="music-control" id="stopMusic" title="Stop">■</button>
+    <audio id="audioPlayer" preload="metadata"></audio>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <footer>
+    <p>A Little Universe <span>♡</span> A little place for happiness.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
